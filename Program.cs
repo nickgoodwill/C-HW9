@@ -4,14 +4,36 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
-void PrintNum(int n)
-{
-    Console.Write(n);
-    if (n > 1)
-    {
-        PrintNum((n-1));
+// void PrintNum(int n)
+// {
+//     Console.Write(n);
+//     if (n > 1)
+//     {
+//         PrintNum((n-1));
         
+//     }
+// }
+
+// PrintNum(3);
+
+// Задайте значения M и N. Напишите программу, 
+// которая найдёт сумму натуральных элементов в промежутке от M до N.
+
+// M = 1; N = 15 -> 120
+// M = 4; N = 8. -> 30
+
+int Summ(int n, int m)
+{
+    
+    if (n == m)
+    {
+        return n;
+    }
+    else
+    {
+        
+        return n + Summ(n+1, m);
     }
 }
 
-PrintNum(3);
+Console.WriteLine(Summ(1, 5));
